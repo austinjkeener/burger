@@ -1,6 +1,6 @@
 const orm = require("../config/orm.js");
 
-var cat = {
+const burger = {
     all: function(cb) {
       orm.all("burgers", function(res) {
         cb(res);

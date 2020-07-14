@@ -2,10 +2,20 @@
 
 <h2>Enter in the burgers that you want...</h2>
 
+{{!-- if the burger has been eaten then it will register as true --}}
 <ul>
   {{#each}}
     {{#unless}}
-      {{}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+{{!-- if the burger has not been eaten then it will register as false --}}
+<ul>
+  {{#each}}
+    {{#unless}}
+      {{> burgers/burger-block devoured=false}}
     {{/unless}}
   {{/each}}
 </ul>
