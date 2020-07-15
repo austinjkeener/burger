@@ -2,7 +2,7 @@
   "name": "burger",
   "version": "1.0.0",
   "description": "A burger eating application",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
