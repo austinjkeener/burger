@@ -1,18 +1,17 @@
-var mysql = require("mysql");
-
-var connection = mysql.createConnection({
-  host: "e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-
-  // Your port; if not 3306
-  port: 3306,
-
-  // Your username
-  user: "bbmgpncx4pgjptan",
-
-  // Your password
-  password: "l1t9dg4oog9abj9u",
-  database: "burger_db"
-});
+const mysql = require("mysql");
+let connection;
+// mySQL connection
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: 'localhost',
+    port: 3306,
+    user: 'root',
+    password: 'password',
+    database: 'burgers_db'
+  });
+}
 
 // this is what happens if there is an error
 connection.connect(function(err) {
