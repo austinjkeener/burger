@@ -10,14 +10,14 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "mysqlrules!",
+  password: "password",
   database: "burger_db"
 });
 
 connection.connect(function(err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId + "\n");
-  createProduct();
+  //createProduct();
 });
 
 module.exports = connection;

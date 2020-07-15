@@ -4,11 +4,9 @@ const express = require("express");
 
 //more class notes on the homework due tomorrow night. another short description of the application during teacher demo. user input shows up on the webpage and then persists into the database after the 'submit' button has been clicked. make sure to look into how i can use boolean flags for this assignment. the usage of CRUD is going to be used. using location.reload instead if appending for moving the selections from one side to the other is what i need to do for my list items. scaffold out my application with basic elements and then immediately push to heroku to make sure that it works. look under the supplimental folder in the class repo for how to setup the heroku connection.
 
-var express = require("express");
+const PORT = process.env.PORT || 8080;
 
-var PORT = process.env.PORT || 3000;
-
-var app = express();
+const app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -18,13 +16,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
-var exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burgers_controller.js");
+const routes = require("./controllers/burgers_controller.js");
 
 app.use(routes);
 

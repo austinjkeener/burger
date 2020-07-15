@@ -1,6 +1,6 @@
 const orm = require("../config/orm.js");
 
-var cat = {
+const burger = {
     all: function(cb) {
       orm.all("burgers", function(res) {
         cb(res);
@@ -13,6 +13,7 @@ var cat = {
       });
     },
     update: function(objColVals, condition, cb) {
+      console.log('I was clicked')
       orm.update("burgers", objColVals, condition, function(res) {
         cb(res);
       });
