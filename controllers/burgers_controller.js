@@ -9,11 +9,13 @@ const router = express.Router();
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   burger.all(function(data) {
+    console.log('Expected data: ', data)
     const hbsObject = {
       burgers: data
     };
     console.log(hbsObject);
-    res.render("index", hbsObject);
+   // res.render("index", hbsObject);
+   res.render("index",{burgers: data})
   });
 });
 router.post("/api/burgers", function(req, res) {
