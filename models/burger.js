@@ -1,5 +1,7 @@
 const orm = require("../config/orm.js");
 
+
+//this document works in collaboration with the orm document so that they can create and update inforamtion along with the user interaction between front end, back end, and server side.
 const burger = {
     all: function(cb) {
       orm.all("burgers", function(res) {
@@ -20,4 +22,5 @@ const burger = {
     }
   };
 
+  // exporting the burger information for other documents to use
   module.exports = burger;

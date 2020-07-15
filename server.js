@@ -4,6 +4,8 @@ const express = require("express");
 
 //more class notes on the homework due tomorrow night. another short description of the application during teacher demo. user input shows up on the webpage and then persists into the database after the 'submit' button has been clicked. make sure to look into how i can use boolean flags for this assignment. the usage of CRUD is going to be used. using location.reload instead if appending for moving the selections from one side to the other is what i need to do for my list items. scaffold out my application with basic elements and then immediately push to heroku to make sure that it works. look under the supplimental folder in the class repo for how to setup the heroku connection.
 
+
+// this is the connection used locally for website testing through node and nodemon
 const PORT = process.env.PORT || 8080;
 
 const app = express();

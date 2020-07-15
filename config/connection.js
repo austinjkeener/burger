@@ -14,10 +14,11 @@ var connection = mysql.createConnection({
   database: "burger_db"
 });
 
+// this is what happens if there is an error
 connection.connect(function(err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId + "\n");
-  //createProduct();
 });
 
+// exporting connection
 module.exports = connection;

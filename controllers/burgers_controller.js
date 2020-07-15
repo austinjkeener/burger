@@ -1,12 +1,10 @@
 const express = require("express");
 const burger = require("../models/burger.js");
-
-
 const router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// this document is where i am using crud (create, read, update, delete)
 
-// Create all our routes and set up logic within those routes where required.
+// Create all routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
   burger.all(function(data) {
     console.log('Expected data: ', data)
@@ -25,6 +23,7 @@ router.post("/api/burgers", function(req, res) {
   });
 });
 
+//this is how i am updating the content within the document
 router.put("/api/burgers/:id", function(req, res) {
   const condition = "id = " + req.params.id;
 

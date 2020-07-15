@@ -1,29 +1,6 @@
 const connection = require("../config/connection.js");
 
-// var orm = {
-//     selectAll: function(){
-//         var queryString = "";
-//         connection.query(queryString,[],function(err, result) {
-//             if (err) throw err;
-//             console.log(result);
-//           });
-//     },
-//     insertOne: function(){
-//         var queryString = "";
-//         connection.query(queryString,[],function(err, result) {
-//             if (err) throw err;
-//             console.log(result);
-//           });
-//     },
-//     updateOne: function(){
-//         var queryString = "";
-//         connection.query(queryString,[],function(err, result) {
-//             if (err) throw err;
-//             console.log(result);
-//           });
-//     }
-// }
-
+//using orm methods here to select information from the database
 var orm = {
     
     //select all
@@ -79,4 +56,5 @@ var orm = {
     }
   };
 
+// exporting orm
 module.exports = orm;

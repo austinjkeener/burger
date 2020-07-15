@@ -2,7 +2,7 @@
 
 <h2>Enter in the burgers that you want...</h2>
 
-{{!-- if the burger has been eaten then it will register as true --}}
+{{!-- if the burger has been eaten then it will register as true. This is where the information initially goes after the submit button has been clicked. --}}
 <ul>
   {{#each burgers}}
   <p>{{burger_name}}</p>
@@ -13,7 +13,7 @@
   
 </ul>
 
-{{!-- if the burger has not been eaten then it will register as false --}}
+{{!-- if the burger has not been eaten then it will register as false. After the user chooses to 'eat' the burger it is then transfered over to the other side of the web page using the logic below --}}
 <ul>
   {{#each burgers}}
    {{#unless sleepy}}
